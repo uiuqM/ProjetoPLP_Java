@@ -76,14 +76,14 @@ public class login extends JFrame {
 		
 		JLabel lblNewLabel_1 = new JLabel("");
 		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_1.setIcon(new ImageIcon("D:\\downloads\\output-onlinepngtools.png"));
+		lblNewLabel_1.setIcon(new ImageIcon("D:\\projetoPLP\\img\\panel.png"));
 		lblNewLabel_1.setBounds(111, 127, 379, 343);
 		contentPane.add(lblNewLabel_1);
 		
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setBounds(-64, 0, 720, 636);
-		lblNewLabel.setIcon(new ImageIcon("D:\\projetoBarbearia\\logo.jpg"));
+		lblNewLabel.setIcon(new ImageIcon("D:\\projetoPLP\\img\\logo.jpg"));
 		contentPane.add(lblNewLabel);
 	}
 }
