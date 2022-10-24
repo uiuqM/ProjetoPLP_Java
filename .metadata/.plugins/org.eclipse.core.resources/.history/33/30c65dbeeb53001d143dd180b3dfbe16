@@ -18,7 +18,6 @@ import javax.swing.SwingConstants;
 import javax.swing.JTextPane;
 import javax.swing.JTextArea;
 import javax.swing.table.DefaultTableModel;
-import javax.swing.JScrollPane;
 
 public class Agenda extends JFrame {
 
@@ -27,6 +26,7 @@ public class Agenda extends JFrame {
 	private JTextField textFieldValor;
 	private JTextField textFieldData;
 	private JTextField textFieldHora;
+	private JTable table;
 
 	/**
 	 * Launch the application.
@@ -55,6 +55,28 @@ public class Agenda extends JFrame {
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		
+		table = new JTable();
+		table.setModel(new DefaultTableModel(
+			new Object[][] {
+				{null, null, null, null, null, null, null},
+				{null, null, null, null, null, null, null},
+				{null, null, null, null, null, null, null},
+				{null, null, null, null, null, null, null},
+			},
+			new String[] {
+				"ID", "Cliente", "Servi\u00E7o", "Valor", "Data", "Hora", "Observa\u00E7\u00E3o"
+			}
+		) {
+			Class[] columnTypes = new Class[] {
+				Integer.class, String.class, String.class, Float.class, Object.class, Object.class, String.class
+			};
+			public Class getColumnClass(int columnIndex) {
+				return columnTypes[columnIndex];
+			}
+		});
+		table.setBounds(51, 729, 1220, -317);
+		contentPane.add(table);
 		
 		JTextArea textAreaObservacao = new JTextArea();
 		textAreaObservacao.setBounds(623, 39, 588, 249);

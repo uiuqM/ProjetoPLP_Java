@@ -17,8 +17,6 @@ import javax.swing.ImageIcon;
 import javax.swing.SwingConstants;
 import javax.swing.JTextPane;
 import javax.swing.JTextArea;
-import javax.swing.table.DefaultTableModel;
-import javax.swing.JScrollPane;
 
 public class Agenda extends JFrame {
 
