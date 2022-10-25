@@ -1,0 +1,7 @@
+package model;
+
+public class Agendamento {
+	protected int id;
+	protected Cliente cliente;
+	protected Servico servico;
+}

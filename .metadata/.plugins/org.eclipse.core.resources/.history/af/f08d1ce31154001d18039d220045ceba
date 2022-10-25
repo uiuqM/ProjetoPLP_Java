@@ -1,0 +1,8 @@
+package model;
+
+public class Servico {
+	private int Id;
+	private String Descricao;
+	private float Valor;
+	
+}

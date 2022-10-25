@@ -1,0 +1,21 @@
+package model;
+
+import java.util.Date;
+
+public class Usuario extends Pessoa{
+	private String senha, nivelAcesso;
+	
+	
+	public Usuario(int id, String nome, String senha, String nivelAcesso, String telefone, String email, String rg,
+			char sexo, Date dataNasc) {
+		super(id, nome, telefone, email, rg, sexo, dataNasc);
+		this.senha = senha;
+		this.nivelAcesso = nivelAcesso;
+	}
+	
+	public Usuario(int id, String nome, String senha, String nivelAcesso) {
+		super(id, nome);
+		this.senha = senha;
+		this.nivelAcesso = nivelAcesso;
+	}
+}

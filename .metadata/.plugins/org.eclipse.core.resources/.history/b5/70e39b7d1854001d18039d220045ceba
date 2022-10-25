@@ -1,0 +1,11 @@
+package model;
+
+public class Agendamento {
+	protected int id;
+	protected Cliente cliente;
+	protected Servico servico;
+	protected float valor;
+	protected Date Data;
+	protected DateTime Hora;
+	protected String Observacao;
+}

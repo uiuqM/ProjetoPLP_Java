@@ -1,0 +1,23 @@
+package model;
+
+import java.util.Date;
+
+public class Cliente {
+	private int id;
+	private String nome, telefone, email, rg, endereco, CPF;
+	private char sexo;
+	private Date dataNasc;
+	
+	public Cliente(int id, String nome, String telefone, String email, String rg, String endereco, String cPF,
+			char sexo, Date dataNasc) {
+		this.id = id;
+		this.nome = nome;
+		this.telefone = telefone;
+		this.email = email;
+		this.rg = rg;
+		this.endereco = endereco;
+		this.CPF = CPF;
+		this.sexo = sexo;
+		this.dataNasc = dataNasc;
+	}
+}

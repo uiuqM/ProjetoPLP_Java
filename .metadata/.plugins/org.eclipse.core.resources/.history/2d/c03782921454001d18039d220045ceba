@@ -1,0 +1,12 @@
+package model;
+
+import java.util.Date;
+
+public class Pessoa {
+	private int id;
+	private String nome, telefone, email, rg;
+	private char sexo;
+	private Date dataNasc;
+	
+	
+}

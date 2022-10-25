@@ -1,0 +1,29 @@
+package model;
+
+import java.util.Date;
+
+public class Pessoa {
+	private int id;
+	private String nome, telefone, email, rg;
+	private char sexo;
+	private Date dataNasc;
+	
+	
+	public Pessoa(int id, String nome) {
+		this.id = id;
+		this.nome = nome;
+	}
+
+
+	public Pessoa(int id, String nome, String telefone, String email, String rg, char sexo, Date dataNasc) {
+		this.id = id;
+		this.nome = nome;
+		this.telefone = telefone;
+		this.email = email;
+		this.rg = rg;
+		this.sexo = sexo;
+		this.dataNasc = dataNasc;
+	}
+	
+	
+}

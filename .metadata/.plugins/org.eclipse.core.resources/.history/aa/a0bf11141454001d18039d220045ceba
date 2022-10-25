@@ -1,0 +1,10 @@
+package model;
+
+import java.util.Date;
+
+public class Usuario {
+	private int id;
+	private String nome, senha, nivelAcesso, telefone, email, rg;
+	private char sexo;
+	private Date dataNasc;
+}

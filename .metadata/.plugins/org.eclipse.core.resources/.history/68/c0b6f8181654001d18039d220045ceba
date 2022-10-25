@@ -1,0 +1,20 @@
+package model;
+
+import java.util.Date;
+
+public class Cliente extends Pessoa{
+	
+	private String endereco, cep;
+	
+	public Cliente(int id, String nome, String telefone, String email, String rg, String endereco, String cep, char sexo, Date dataNasc) {
+		super(id, nome, telefone, email, rg, sexo, dataNasc);
+		this.endereco = endereco;
+		this.cep = cep;
+	}
+
+	public Cliente(int id, String nome, String endereco, String cep) {
+		super(id, nome);
+		this.endereco = endereco;
+		this.cep = cep;
+	}
+}
