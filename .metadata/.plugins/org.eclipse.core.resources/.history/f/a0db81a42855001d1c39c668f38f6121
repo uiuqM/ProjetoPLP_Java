@@ -1,0 +1,9 @@
+package Controller;
+
+public class LoginController {
+	private final Login view;
+	
+	public LoginControler(Login view) {
+		this.view = view;
+	}
+}

@@ -1,0 +1,9 @@
+package Controller;
+
+import view.MenuPrincipal;
+
+public class menuPrincipalController {
+	private final MenuPrincipal view;
+	
+	
+}

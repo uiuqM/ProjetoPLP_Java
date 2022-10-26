@@ -1,0 +1,24 @@
+package Controller;
+
+import view.login;
+
+public class LoginController {
+	private final login view;
+	
+	public LoginController(login view) {
+		this.view = view;
+	}
+	
+	public void ActionButton() {
+		this.view.showMessage("clicou no botão");
+	}
+	
+	public void loginSys() {
+		//Recebe usuario view;
+		//Pesquisa usuario no banco;
+		//usuario no banco vai p menu;
+		//se não usuario inexistente.
+		
+		String nome = view.getCampoUusuario().getText();
+	}
+}

@@ -1,24 +1,25 @@
 package view;
 
 import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JMenu;
+import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-import javax.swing.JLabel;
-import javax.swing.ImageIcon;
+
+import Controller.menuPrincipalController;
 import javax.swing.JMenuBar;
-import javax.swing.JMenu;
-import javax.swing.SwingConstants;
-import javax.swing.JList;
-import javax.swing.JMenuItem;
 import javax.swing.JToolBar;
-import javax.swing.JSeparator;
-import javax.swing.JInternalFrame;
 
 public class MenuPrincipal extends JFrame {
 
 	private JPanel contentPane;
+	private final menuPrincipalController controller;
 
 	/**
 	 * Launch the application.
@@ -44,29 +45,44 @@ public class MenuPrincipal extends JFrame {
 		setBounds(100, 100, 1104, 598);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		
+		this.controller = new menuPrincipalController(this);
+		
+		JMenuBar menuBar = new JMenuBar();
+		setJMenuBar(menuBar);
+		
+		JMenu relatorioMenu = new JMenu("Relatório");
+		menuBar.add(relatorioMenu);
+		
+		JMenu cadastroMenu = new JMenu("Cadastro");
+		menuBar.add(cadastroMenu);
+		
+		JMenuItem servicoItem = new JMenuItem("Serviço");
+		servicoItem.setIcon(new ImageIcon("D:\\projetoPLP\\img\\iconTesoura.png"));
+		cadastroMenu.add(servicoItem);
+		
+		JMenuItem clienteItem = new JMenuItem("Cliente");
+		clienteItem.setIcon(new ImageIcon("D:\\projetoPLP\\img\\iconCliente.png"));
+		cadastroMenu.add(clienteItem);
+		
+		JMenu operacaoMenu = new JMenu("Operação");
+		menuBar.add(operacaoMenu);
+		
+		JMenuItem agendaItem = new JMenuItem("Agenda");
+		agendaItem.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				controller.navigateSchedule();
+			}
+		});
+		agendaItem.setIcon(new ImageIcon("D:\\projetoPLP\\img\\agenda.png"));
+		operacaoMenu.add(agendaItem);
 
 		setContentPane(contentPane);
-		
-		JMenu mnNewMenu = new JMenu("Cadastro");
-		contentPane.add(mnNewMenu);
-		
-		JMenuItem mntmNewMenuItem_1 = new JMenuItem("Serviço");
-		mntmNewMenuItem_1.setIcon(new ImageIcon("D:\\projetoPLP\\img\\iconTesoura.png"));
-		mnNewMenu.add(mntmNewMenuItem_1);
-		
-		JMenuItem mntmNewMenuItem = new JMenuItem("Cliente");
-		mntmNewMenuItem.setIcon(new ImageIcon("D:\\projetoPLP\\img\\iconCliente.png"));
-		mnNewMenu.add(mntmNewMenuItem);
-		
-		JMenu mnNewMenu_1 = new JMenu("Operação");
-		contentPane.add(mnNewMenu_1);
-		
-		JMenu mnNewMenu_2 = new JMenu("Relatório");
-		contentPane.add(mnNewMenu_2);
+		contentPane.setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setBounds(-15, 10, 1120, 701);
 		lblNewLabel.setIcon(new ImageIcon("D:\\projetoPLP\\img\\fundoMenu.png"));
 		contentPane.add(lblNewLabel);
 	}
-
 }

@@ -1,22 +1,32 @@
 package view;
 
-import java.awt.EventQueue;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-import javax.swing.JLabel;
-import javax.swing.ImageIcon;
-import javax.swing.SwingConstants;
-import java.awt.Font;
 import java.awt.Color;
+import java.awt.EventQueue;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.text.ParseException;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.SwingConstants;
+import javax.swing.border.EmptyBorder;
+
+import Controller.LoginController;
+import model.DAO.Banco;
+import javax.swing.JPasswordField;
 
 public class login extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField campoUusuario;
-	private JTextField campoSenha;
+	private final LoginController controller;
+	private JPasswordField campoSenha;
 
 	/**
 	 * Launch the application.
@@ -36,20 +46,33 @@ public class login extends JFrame {
 
 	/**
 	 * Create the frame.
+	 * @throws ParseException 
 	 */
-	public login() {
+	public login() throws ParseException {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 608, 615);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		Banco.inicia();
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		campoSenha = new JTextField();
-		campoSenha.setColumns(10);
-		campoSenha.setBounds(206, 353, 192, 34);
+		controller = new LoginController(this);
+		
+		JButton botaoLogin = new JButton("Entrar");
+		botaoLogin.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				controller.loginSys();
+			}
+		});
+		
+		campoSenha = new JPasswordField();
+		campoSenha.setBounds(208, 353, 190, 34);
 		contentPane.add(campoSenha);
+		botaoLogin.setFont(new Font("Tahoma", Font.BOLD, 16));
+		botaoLogin.setBounds(206, 407, 192, 34);
+		contentPane.add(botaoLogin);
 		
 		campoUusuario = new JTextField();
 		campoUusuario.setBounds(206, 249, 192, 34);
@@ -85,5 +108,17 @@ public class login extends JFrame {
 		lblNewLabel.setBounds(-64, 0, 720, 636);
 		lblNewLabel.setIcon(new ImageIcon("D:\\projetoPLP\\img\\logo.jpg"));
 		contentPane.add(lblNewLabel);
+	}
+	
+	public void showMessage(String msg) {
+		JOptionPane.showMessageDialog(null, msg);
+	}
+
+	public JTextField getCampoUusuario() {
+		return campoUusuario;
+	}
+	
+	public JTextField getCampoSenha() {
+		return campoSenha;
 	}
 }

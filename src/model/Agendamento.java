@@ -15,13 +15,12 @@ public class Agendamento {
 	protected TimeZone Hora;
 	protected String Observacao;
 	
-	public Agendamento(int id, Cliente cliente, Servico servico, float valor, String data, TimeZone hora) throws ParseException {
+	public Agendamento(int id, Cliente cliente, Servico servico, float valor, String data) throws ParseException {
 		this.id = id;
 		this.cliente = cliente;
 		this.servico = servico;
 		this.valor = valor;
 		this.Data = sdf.parse(data);
-		this.Hora = hora;
 	}
 
 	public int getId() {
@@ -63,15 +62,7 @@ public class Agendamento {
 	public void setData(Date data) {
 		Data = data;
 	}
-
-	public TimeZone getHora() {
-		return Hora;
-	}
-
-	public void setHora(TimeZone hora) {
-		Hora = hora;
-	}
-
+	
 	public String getObservacao() {
 		return Observacao;
 	}

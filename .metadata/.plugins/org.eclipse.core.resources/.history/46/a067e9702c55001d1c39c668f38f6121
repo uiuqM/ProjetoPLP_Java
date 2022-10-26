@@ -1,0 +1,15 @@
+package Controller;
+
+import view.login;
+
+public class LoginController {
+	private final login view;
+	
+	public LoginController(login view) {
+		this.view = view;
+	}
+	
+	public void ActionButton() {
+		this.view.showMessage("clicou no botão");
+	}
+}

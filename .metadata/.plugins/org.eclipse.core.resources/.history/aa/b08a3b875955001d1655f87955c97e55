@@ -1,0 +1,20 @@
+package Controller;
+
+import model.DAO.AgendamentoDAO;
+import view.Agenda;
+
+public class AgendaController {
+	private Agenda view;
+	
+	public AgendaController(Agenda view) {
+		this.view = view;
+	}
+	
+	public void updateTable() {
+		//pega lista com agendamento;
+		AgendamentoDAO agendamentoDAO = new AgendamentoDAO();
+		agendamentoDAO.selectAll();
+		//exibir lista na view;
+		
+	}
+}

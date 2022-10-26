@@ -1,0 +1,11 @@
+package Controller;
+
+import view.login;
+
+public class LoginController {
+	private final login view;
+	
+	public LoginControler(login view) {
+		this.view = view;
+	}
+}

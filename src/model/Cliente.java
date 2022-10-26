@@ -6,8 +6,8 @@ public class Cliente extends Pessoa{
 	
 	protected String endereco, cep;
 	
-	public Cliente(int id, String nome, String telefone, String email, String rg, String endereco, String cep, char sexo, String dataNasc) throws ParseException {
-		super(id, nome, telefone, email, rg, sexo, dataNasc);
+	public Cliente(int id, String nome, char sexo, String dataNasc, String telefone, String email, String rg, String endereco, String cep) throws ParseException {
+		super(id, nome, sexo, dataNasc, telefone, email, rg);
 		this.endereco = endereco;
 		this.cep = cep;
 	}

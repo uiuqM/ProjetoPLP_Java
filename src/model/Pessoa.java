@@ -18,7 +18,7 @@ abstract public class Pessoa {
 	}
 
 
-	public Pessoa(int id, String nome, String telefone, String email, String rg, char sexo, String dataNasc) throws ParseException {
+	public Pessoa(int id, String nome, char sexo, String dataNasc, String telefone, String email, String rg) throws ParseException {
 		this.id = id;
 		this.nome = nome;
 		this.telefone = telefone;

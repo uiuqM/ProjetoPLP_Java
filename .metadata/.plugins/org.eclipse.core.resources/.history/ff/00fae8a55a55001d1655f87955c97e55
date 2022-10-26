@@ -1,0 +1,19 @@
+package Controller.Helper;
+
+import java.util.ArrayList;
+
+import model.Agendamento;
+import view.Agenda;
+
+public class AgendaHelper {
+	private final Agenda view;
+	
+	public AgendaHelper(Agenda view) {
+		this.view = view;
+	}
+
+	public void fillTable(ArrayList<Agendamento> listaAgenda) {
+		view.getTable().getModel();
+	}
+	
+}

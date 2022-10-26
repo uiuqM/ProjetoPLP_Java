@@ -27,4 +27,8 @@ public class Servico {
 		this.Valor = Valor;
 	}
 	
+	public int getId() {
+		return Id;
+	}
+	
 }

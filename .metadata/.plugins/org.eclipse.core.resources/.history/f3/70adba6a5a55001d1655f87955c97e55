@@ -1,0 +1,12 @@
+package Controller.Helper;
+
+import view.Agenda;
+
+public class AgendaHelper {
+	private final Agenda view;
+	
+	public AgendaHelper(Agenda view) {
+		this.view = view;
+	}
+	
+}

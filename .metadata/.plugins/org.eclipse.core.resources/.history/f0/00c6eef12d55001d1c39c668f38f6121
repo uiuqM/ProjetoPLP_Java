@@ -1,0 +1,15 @@
+package Controller.Helper;
+
+import view.login;
+
+public class loginHelper {
+	private final login view;
+	
+	public loginHelper(login view) {
+		this.view = view;
+	}
+	
+	public Usuario obterModelo() {
+		
+	}
+}

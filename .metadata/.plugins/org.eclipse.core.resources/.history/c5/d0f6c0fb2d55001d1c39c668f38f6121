@@ -1,0 +1,19 @@
+package Controller.Helper;
+
+import model.Usuario;
+import view.login;
+
+public class loginHelper {
+	private final login view;
+
+	public loginHelper(login view) {
+		this.view = view;
+	}
+
+	public Usuario obterModelo() {
+		String nome = view.getCampoUusuario().getText();
+		String senha = view.getCampoSenha().getText();
+
+		Usuario usuario = new Usuario(0, nome, senha);
+	}
+}

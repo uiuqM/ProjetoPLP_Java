@@ -1,0 +1,7 @@
+package Controller;
+
+import view.Agenda;
+
+public class AgendaController {
+	private Agenda view;
+}
